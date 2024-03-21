@@ -55,3 +55,5 @@ const scrollRevealOption = {
     ...scrollRevealOption,
     delay: 2500,
   });
+
+  
