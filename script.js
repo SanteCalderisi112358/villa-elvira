@@ -56,4 +56,12 @@ const scrollRevealOption = {
     delay: 2500,
   });
 
-  
+  async function getAppartamenti(){
+const response = await fetch("./apartments.json");
+const data = await response.json();
+console.log(data)
+
+
+}
+
+  getAppartamenti()

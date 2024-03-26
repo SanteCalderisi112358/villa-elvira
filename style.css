@@ -29,6 +29,7 @@ body {
 
 main {
     width: 100%;
+    margin-top: 130px;
 }
 
 nav {
@@ -292,10 +293,11 @@ main {
 
 }
 
-.flip-card:hover {
+.container-flipcard:hover .flip-card {
     cursor: pointer;
     transform: rotateY(180deg);
 }
+
 
 .front,
 .back {
@@ -445,6 +447,41 @@ main {
     .carousel-inner {
         height: 100%;
     }
+
+    /*FLIP CARD*/
+   .back{
+    transform: rotateY(0);
+    background-color: transparent;
+    /* transition: all 300ms; */
+    opacity: 0;
+
+   }
+    .container-flipcard:hover .flip-card{
+        transform: rotateY(0);
+        
+
+    }
+
+    .container-flipcard:hover .front{
+        filter: blur(2px);
+
+    }
+
+    .container-flipcard:hover .back{
+        /* transform: rotateY(0); */
+        background-color: #F07E23;
+        height: 50%;
+        bottom: 0;
+opacity: 1;
+transition: all 300ms;
+
+    }
+
+    .container-flipcard:hover .back h3,
+    .container-flipcard:hover .back p{
+        color: var(--extra-light);
+    }
+
 }
 
 @media(max-width:768px) {
