@@ -70,8 +70,12 @@ console.log(data)
   serviziEl.addEventListener("click", function(e) {
     if (e.target.classList.contains('servizio-button')) {
         let buttonData = e.target.dataset.button;
-        let servizioTitleToShow = document.querySelector(`.servizio-title[data-service="${buttonData}"]`);
+        let servizioItemEL = document.querySelector(`.servizi-item[data-service="${buttonData}"]`);
+        let servizioImageEl = servizioItemEL.querySelector('div div')
+        let servizioTitleToShow = document.querySelector(`.servizio-title[data-description="${buttonData}"]`);
         if (servizioTitleToShow) {
+          console.log(servizioImageEl)
+          console.log(servizioItemEL)
             let serviziTitles = document.querySelectorAll('.servizio-title');
             let buttonsEls = document.querySelectorAll('.servizio-button');
             buttonsEls.forEach(btn =>{

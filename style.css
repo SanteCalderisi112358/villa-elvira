@@ -298,6 +298,9 @@ main {
     transform: rotateY(180deg);
 }
 
+.container-flipcard:hover .front div{
+    visibility: hidden;
+}
 
 .front,
 .back {
@@ -339,6 +342,8 @@ main {
     background-color: var(--extra-light);
     transform: rotateY(180deg);
     padding: 1rem;
+    box-shadow: none;
+    border: none;
 }
 
 .front__1 {
@@ -452,7 +457,7 @@ main {
 .servizio-button:hover{
     color: white;
 }
-.servizio-image:hover div {
+.servizio-image div {
     width: 100%;
     height: 100%;
     opacity: 1;
@@ -461,16 +466,17 @@ main {
 }
 
 
-.servizio-image:hover .servizio-overlay,
+/* .servizio-image:hover .servizio-overlay,
 .servizio-overlay-active{
     width: 100%;
     height: 100%;
     opacity: 1;
     border: 2px solid var(--primary-color);
     transition: all 0.5s ease;
-}
+} */
 
 
+ 
 .servizio-title{
     padding: 1rem 2rem;
     display: flex;
@@ -479,7 +485,8 @@ main {
     display: none;
     position: absolute;
     bottom: -55%;
-    background-color: var(--extra-light);
+    background-color: white;
+    border: 2px solid var(--primary-color);
 }
 
 .servizio-title h3{
@@ -607,12 +614,14 @@ main {
 
     .container-flipcard:hover .front{
         filter: blur(2px);
+        filter: brightness(0.5);
+
 
     }
 
     .container-flipcard:hover .back{
         /* transform: rotateY(0); */
-        background-color: #F07E23;
+        /* background-color: #F07E23; */
         height: 50%;
         bottom: 0;
 opacity: 1;
