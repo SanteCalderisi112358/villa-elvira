@@ -342,21 +342,164 @@ main {
 }
 
 .front__1 {
-    background-image: url('https://picsum.photos/id/19/1200/1500');
+    background-image: url('./assets/prodotti/oil.jpg');
 }
 
 .front__2 {
-    background-image: url('https://picsum.photos/id/287/1200/1500');
+    background-image: url('./assets/prodotti/marmellata.jpg');
 }
 
 .front__3 {
-    background-image: url('https://picsum.photos/id/365/1200/1500');
+    background-image: url('./assets/prodotti/limoncino.jpg');
 }
 
 .front__4 {
-    background-image: url('https://picsum.photos/id/43/1200/1500');
+    background-image: url('./assets/prodotti/pomodori-secchi.jpg');
 }
 
+/*SERVIZI*/
+#servizi{
+    width: 100%;
+    margin-bottom: 250px;
+}
+.servizi-details{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.servizi-item{
+   width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    position: relative;
+}
+.servizio-image{
+    width: 80%;
+    height: 80%;
+    background-color: #F07E23;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+
+}
+
+.servizio-image div{
+    width: 95%;
+    opacity: .7;
+    height: 95%;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.servizio-button {
+    text-decoration: none;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 25%;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 0 15px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, .25);
+    font-size: 20px;
+    color:#F07E23;
+    line-height: 50px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    padding: 0px 20px;
+    -webkit-backdrop-filter: blur(15px) contrast(100%);
+    backdrop-filter: blur(10px) contrast(100%);
+    position: relative;
+    overflow: hidden; 
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.9);
+}
+
+.servizio-button::before,
+.servizio-button::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #F07E23;
+    transition: height 0.3s ease-in-out;
+}
+
+.servizio-button::after {
+    top: -100%;
+}
+
+.servizio-button:hover::before,
+.servizio-button:hover::after {
+    height: 200%; 
+    z-index: -1;
+}
+
+.servizio-button:hover{
+    color: white;
+}
+.servizio-image:hover div {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    border: 2px solid var(--primary-color);
+    transition: all 0.5s ease;
+}
+
+
+.servizio-image:hover .servizio-overlay,
+.servizio-overlay-active{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    border: 2px solid var(--primary-color);
+    transition: all 0.5s ease;
+}
+
+
+.servizio-title{
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    display: none;
+    position: absolute;
+    bottom: -55%;
+    background-color: var(--extra-light);
+}
+
+.servizio-title h3{
+    text-align: center;
+    color: var(--primary-color);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.servizio-image-1 div{
+    background-image: url('./assets/servizi/breakfast.jpg');
+}
+.servizio-image-2 div{
+    background-image: url('./assets/servizi/area-relax.jpg');
+}
+.servizio-image-3 div{
+    background-image: url('./assets/servizi/barbecue.jpg');
+}
+.servizio-image-4 div{
+    background-image: url('./assets/servizi/dog-area.jpg');
+}
 
 @media (width > 768px) {
 .slider::before,
@@ -524,7 +667,13 @@ transition: all 300ms;
         font-size: 10px;
     }
 
+    #servizi{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
+    
 
 }
 

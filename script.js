@@ -1,6 +1,7 @@
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
+const serviziEl = document.querySelector('.servizi-details')
 
 menuBtn.addEventListener("click", (e) => {
   navLinks.classList.toggle("open");
@@ -65,3 +66,28 @@ console.log(data)
 }
 
   getAppartamenti()
+
+  serviziEl.addEventListener("click", function(e) {
+    if (e.target.classList.contains('servizio-button')) {
+        let buttonData = e.target.dataset.button;
+        let servizioTitleToShow = document.querySelector(`.servizio-title[data-service="${buttonData}"]`);
+        if (servizioTitleToShow) {
+            let serviziTitles = document.querySelectorAll('.servizio-title');
+            let buttonsEls = document.querySelectorAll('.servizio-button');
+            buttonsEls.forEach(btn =>{
+              if(btn.dataset.button!=buttonData){
+                btn.style.display = "block"
+              }
+            })
+            serviziTitles.forEach(function(servizioTitle) {
+                servizioTitle.style.display = 'none';                
+            });
+            servizioTitleToShow.style.display = 'block'; 
+            e.target.style.display = 'none'
+            
+        }
+    }
+});
+
+
+console.log(serviziEl)
