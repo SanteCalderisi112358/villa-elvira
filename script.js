@@ -95,3 +95,10 @@ console.log(data)
 
 
 console.log(serviziEl)
+
+function googleTranslateElementInit(){
+  new google.translate.TranslateElement(
+    {pageLanguage:'it'},
+    'google_translate_element'
+  )
+}

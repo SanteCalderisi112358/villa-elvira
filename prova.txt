@@ -1,0 +1,43 @@
+<li>
+                    <div class="lang-menu">
+                        <div class="selected-lang">
+                            <div class="lang">
+                                Lingua
+                            </div>
+                            <div>
+                                <img src="https://flagsapi.com/BE/flat/32.png" alt="Flag">
+                            </div>
+                        </div>
+        <div id="google_translate_element"></div>
+                    </div>
+                </li>
+
+
+
+function googleTranslateElementInit(){
+  new google.translate.TranslateElement(
+    {pageLanguage:'it'},
+    'google_translate_element'
+  )
+}
+
+
+.lang-menu{
+    position: absolute;
+    bottom: -50px;
+    right: 10px;
+}
+.selected-lang{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: var(--primary-color);
+    cursor: pointer;
+    position: relative;
+}
+
+#google_translate_element{
+    position: absolute;
+    right: 2rem;
+}
