@@ -2,6 +2,21 @@ const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
 const serviziEl = document.querySelector('.servizi-details')
+const langMenuEl = document.querySelector('.selected-lang')
+let langMenu = document.querySelector('.lang-menu');
+let langEl = document.querySelector('.lang')
+let isLangSelected = false;
+let googleTranslateEl = document.getElementById('google_translate_element'); 
+let lang = 'IT'
+
+console.log(navLinks)
+
+
+function getLang(){
+  langEl.innerText = lang
+}
+
+getLang()
 
 menuBtn.addEventListener("click", (e) => {
   navLinks.classList.toggle("open");
@@ -11,8 +26,43 @@ menuBtn.addEventListener("click", (e) => {
 });
 
 navLinks.addEventListener("click", (e) => {
-  navLinks.classList.remove("open");
-  menuBtnIcon.setAttribute("class", "ri-menu-line");
+  console.log(e.target);
+  if (!e.target.closest(".lang-menu")) {
+      navLinks.classList.remove("open");
+      menuBtnIcon.setAttribute("class", "ri-menu-line");
+  }
+  if (!e.target.closest("#google_translate_element")) {
+      navLinks.classList.remove("open");
+      menuBtnIcon.setAttribute("class", "ri-menu-line");
+  }
+
+});
+
+langMenuEl.addEventListener("click", (e) => {
+  console.log('ciao')
+  e.stopPropagation(); 
+  googleTranslateEl.classList.toggle('open');
+});
+// Funzione per ottenere il codice della lingua selezionata
+function getSelectedLanguageCode() {
+  // Ottieni l'elemento dell'opzione correntemente selezionata nel widget di Google Translate
+  var selectedLanguageElement = document.querySelector('.goog-te-combo option:checked');
+  
+  // Ottieni il valore dell'attributo "value" dall'elemento
+  var selectedLanguageCode = selectedLanguageElement.getAttribute('value');
+isLangSelected = true;
+  return selectedLanguageCode;
+}
+
+
+// Aggiungi un gestore di eventi al menu lingua
+
+langMenu.addEventListener("click", function() {
+  let langOther = getSelectedLanguageCode();
+  
+  langEl.innerText = langOther.toUpperCase()
+  console.log("Codice della lingua selezionata:", langOther);
+
 });
 
 
@@ -98,7 +148,8 @@ console.log(serviziEl)
 
 function googleTranslateElementInit(){
   new google.translate.TranslateElement(
-    {pageLanguage:'it'},
+    {pageLanguage:'it',
+  includedLanguages:'en,de,fr,es,nl'},
     'google_translate_element'
   )
 }
