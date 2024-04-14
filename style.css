@@ -256,18 +256,13 @@ nav {
 
 .story {
     height: 500px;
-    background-image: url('https://plus.unsplash.com/premium_photo-1682889762731-375a6b22d794?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background: url('./assets/hero.jpg');
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
 }
 
 
-
-#appartamenti,
-#prodotti {
-    width: 80%;
-}
 
 #prodotti div {
     display: flex;
@@ -383,7 +378,6 @@ nav {
 /*SERVIZI*/
 #servizi{
     width: 100%;
-    margin-bottom: 250px;
 }
 .servizi-details{
     display: flex;
@@ -513,10 +507,10 @@ nav {
     text-transform: uppercase;
 }
 .servizio-image-1 div{
-    background-image: url('./assets/servizi/breakfast.jpg');
+    background-image: url('./assets/servizi/breakfast-villa-elvira.jpg');
 }
 .servizio-image-2 div{
-    background-image: url('./assets/servizi/area-relax.jpg');
+    background-image: url('./assets/servizi/area-relax-villa-elvira.jpg');
 }
 .servizio-image-3 div{
     background-image: url('./assets/servizi/barbecue.jpg');
@@ -545,7 +539,6 @@ nav {
         display: flex;
         align-items: baseline;
         justify-content: space-between;
-        border-radius: 5px;
         background-color: var(--extra-light);
     }
 
@@ -568,7 +561,7 @@ nav {
     }
 
     .story {
-        background-image: url('https://plus.unsplash.com/premium_photo-1682889762731-375a6b22d794?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        background: url('./assets/hero.jpg');
         background-position: center;
         background-size: cover;
         background-attachment: fixed;
@@ -604,9 +597,18 @@ nav {
     .story-text div {
         width: 50%;
         height: 100%;
-        background-color: #F07E23;
+        background: url('./assets/la-nostra-storia/la-nostra-storia-villa-elvira-1.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
+    .story-text-2 div{
+        background: url('./assets/la-nostra-storia/la-nostra-storia-villa-elvira-2.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
     .carousel-inner {
         height: 100%;
@@ -638,7 +640,7 @@ nav {
         /* transform: rotateY(0); */
         border: none;
         box-shadow: none;
-        height: 50%;
+        height: 60%;
         bottom: 0;
 opacity: 1;
 transition: all 300ms;
@@ -681,12 +683,21 @@ transition: all 300ms;
     .story-text div {
         width: 200px;
         height: 200px;
-        background-color: var(--primary-color);
-    }
+        background: url('./assets/la-nostra-storia/la-nostra-storia-villa-elvira-1.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;    }
 
     .story-text-2 {
         flex-direction: column-reverse;
     }
+    .story-text-2 div {
+        width: 200px;
+        height: 200px;
+        background: url('./assets/la-nostra-storia/la-nostra-storia-villa-elvira-2.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;    }
 
     .slider li {
         font-size: 10px;

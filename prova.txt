@@ -41,3 +41,133 @@ function googleTranslateElementInit(){
     position: absolute;
     right: 2rem;
 }
+
+
+
+
+
+.slider::before,
+.slider::after{
+    width: 350px;
+}
+    body,
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav__bar {
+        margin: auto;
+        padding: 0 2rem;
+        padding-right: 3rem;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        border-radius: 5px;
+        background-color: var(--extra-light);
+    }
+
+    .nav__header {
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .nav__menu__btn {
+        display: none;
+    }
+
+    .nav__links {
+        width: fit-content;
+        padding: 0;
+        position: static;
+        flex-direction: row;
+        transform: none;
+        background-color: transparent;
+    }
+
+    .story {
+        background-image: url('https://plus.unsplash.com/premium_photo-1682889762731-375a6b22d794?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        width: 80%;
+        background-repeat: no-repeat;
+    }
+
+    #story {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 1rem;
+        max-width: var(--max-width);
+    }
+
+    .story-text {
+        display: flex;
+        height: 300px;
+        margin-bottom: 2rem;
+        animation: fade linear both;
+        animation-timeline: view();
+        animation-range: entry 20% cover 50%;
+
+    }
+
+    .story-text p {
+        width: 50%;
+        padding: 0 2rem;
+        font-size: 13px;
+        height: 100%;
+        justify-content: center;
+        text-align: justify;
+    }
+
+    .story-text div {
+        width: 50%;
+        height: 100%;
+        background-color: #F07E23;
+    }
+
+
+    .carousel-inner {
+        height: 100%;
+    }
+
+    /*FLIP CARD*/
+   .back{
+    transform: rotateY(0);
+    background-color: transparent;
+    /* transition: all 300ms; */
+    opacity: 0;
+
+   }
+    .container-flipcard:hover .flip-card{
+        transform: rotateY(0);
+        
+
+    }
+
+    .container-flipcard:hover .front{
+        filter: blur(2px);
+        filter: brightness(0.5);
+
+    }
+.container-flipcard:hover .front div{
+    visibility: hidden;
+}
+    .container-flipcard:hover .back{
+        /* transform: rotateY(0); */
+        border: none;
+        box-shadow: none;
+        height: 50%;
+        bottom: 0;
+opacity: 1;
+transition: all 300ms;
+
+    }
+
+    .container-flipcard:hover .back h3,
+    .container-flipcard:hover .back p{
+        color: var(--extra-light);
+    }

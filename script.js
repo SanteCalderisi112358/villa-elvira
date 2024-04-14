@@ -149,7 +149,7 @@ console.log(serviziEl)
 function googleTranslateElementInit(){
   new google.translate.TranslateElement(
     {pageLanguage:'it',
-  includedLanguages:'en,de,fr,es,nl'},
+  includedLanguages:'en,de,fr,es,nl,it'},
     'google_translate_element'
   )
 }
