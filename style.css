@@ -50,7 +50,7 @@ nav {
 .nav__bar {
     position: relative;
     isolation: isolate;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 35px 80px rgba(0,0,0,0.15);
 }
 
 .nav__header {
@@ -116,7 +116,8 @@ nav {
 #google_translate_element {
     display: none; /* Inizialmente nascosto */
     position: absolute;
-    bottom: -40px;
+    bottom: 0px;
+    right: 10px;
 }
 
 #google_translate_element.open {
@@ -238,7 +239,8 @@ nav {
 #appartamenti h2,
 #prodotti h2,
 .section__container h2,
-#servizi h2 {
+#servizi h2,
+#escursioni h2 {
     font-size: 2rem;
     font-family: var(--header-font);
     color: var(--primary-color);
@@ -249,7 +251,8 @@ nav {
 
 #appartamenti h2,
 #prodotti h2,
-#servizi h2 {
+#servizi h2,
+#escursioni h2 {
     text-align: center;
     text-shadow: none;
 }
@@ -322,7 +325,7 @@ nav {
     background-position: center;
     background-size: cover;
     border-radius: 25px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 35px 80px rgba(0,0,0,0.15);
     position: absolute;
     backface-visibility: hidden;
 }
@@ -358,6 +361,10 @@ nav {
 }
 .back p{
     text-align: center;
+}
+
+.back h3{
+    color: var(--primary-color);
 }
 .front__1 {
     background-image: url('./assets/prodotti/oil.jpg');
@@ -494,11 +501,12 @@ nav {
     z-index: 1;
     display: none;
     bottom: -55%;
-    background-color: var(--extra-light);
 }
 
 .servizio-title p{
     text-align: center;
+    color: var(--text-light);
+
 }
 .servizio-title h3{
     text-align: center;
@@ -519,6 +527,98 @@ nav {
     background-image: url('./assets/servizi/dog-area.jpg');
 }
 
+
+/*ESCURSIONI*/
+
+.container__escursioni{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 100px 50px;
+}
+
+.card__escursioni{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 350px;
+    height: 305px;
+    border: 1px solid var(--primary-color);
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.15);
+    transition: 0.5s;
+}
+
+.card__escursioni:hover{
+    height: 515px;
+}
+
+.imgBox__escursioni{
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 220px;
+    background-color: var(--primary-color);
+    border-radius: 12px;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.card__escursioni:hover .imgBox__escursioni{
+    top: -100px;
+    scale: 0.75;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.15);
+}
+
+.imgBox__escursioni img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content__escursioni{
+    position: absolute;
+    top: 241px;
+    width: 100%;
+    height: 30px;
+    padding: 0 10px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.content__escursioni h4{
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    padding: 0 30px;
+}
+
+.content__escursioni p{
+    color: var(--text-light);
+    visibility: hidden;
+}
+
+.content__escursioni span{
+    color: var(--primary-color);
+}
+
+.content__escursioni a{
+    color: var(--primary-color);
+}
+.card__escursioni:hover .content__escursioni{
+    top: 150px;
+    height: 100%;
+}
+.card__escursioni:hover .content__escursioni p{
+    visibility: visible;
+}
 @media (width > 768px) {
 .slider::before,
 .slider::after{
@@ -647,7 +747,7 @@ transition: all 300ms;
 
     }
 
-    .container-flipcard:hover .back h3,
+   
     .container-flipcard:hover .back p{
         color: var(--extra-light);
     }
@@ -709,7 +809,9 @@ transition: all 300ms;
         justify-content: center;
     }
 
-    
+    .content__escursioni{
+        height: 60px;
+    }
 
 }
 

@@ -7,16 +7,16 @@ let langMenu = document.querySelector('.lang-menu');
 let langEl = document.querySelector('.lang')
 let isLangSelected = false;
 let googleTranslateEl = document.getElementById('google_translate_element'); 
-let lang = 'IT'
+// let lang = 'IT'
 
 console.log(navLinks)
 
 
-function getLang(){
-  langEl.innerText = lang
-}
+// function getLang(){
+//   langEl.innerText = lang
+// }
 
-getLang()
+// getLang()
 
 menuBtn.addEventListener("click", (e) => {
   navLinks.classList.toggle("open");
@@ -57,13 +57,13 @@ isLangSelected = true;
 
 // Aggiungi un gestore di eventi al menu lingua
 
-langMenu.addEventListener("click", function() {
-  let langOther = getSelectedLanguageCode();
+// langMenu.addEventListener("click", function() {
+//   let langOther = getSelectedLanguageCode();
   
-  langEl.innerText = langOther.toUpperCase()
-  console.log("Codice della lingua selezionata:", langOther);
+//   langEl.innerText = langOther.toUpperCase()
+//   console.log("Codice della lingua selezionata:", langOther);
 
-});
+// });
 
 
 const scrollRevealOption = {
