@@ -39,7 +39,6 @@ navLinks.addEventListener("click", (e) => {
 });
 
 langMenuEl.addEventListener("click", (e) => {
-  console.log('ciao')
   e.stopPropagation(); 
   googleTranslateEl.classList.toggle('open');
 });
@@ -67,9 +66,9 @@ isLangSelected = true;
 
 
 const scrollRevealOption = {
-    distance: "50px",
+    distance: "150px",
     origin: "bottom",
-    duration: 1000,
+    duration: 1500,
   };
 
   ScrollReveal().reveal(".header__container .section__subheader", {
@@ -82,29 +81,75 @@ const scrollRevealOption = {
   });
   ScrollReveal().reveal(".header__container h2", {
     ...scrollRevealOption,
-    delay: 1000,
+    delay: 500,
   });
-  
-  
-  
-  
-  
-  
+  ScrollReveal().reveal("#appartamenti h2", {
+    ...scrollRevealOption,
+    delay: 500,
+  });
   ScrollReveal().reveal("#card-1", {
     ...scrollRevealOption,
     delay: 500,
   });
   ScrollReveal().reveal("#card-2", {
     ...scrollRevealOption,
-    delay: 1500,
+    delay: 500,
   });
   ScrollReveal().reveal("#card-3", {
     ...scrollRevealOption,
-    delay: 2000,
+    delay: 500,
   });
   ScrollReveal().reveal("#card-4", {
     ...scrollRevealOption,
-    delay: 2500,
+    delay: 500,
+  });
+  ScrollReveal().reveal("#servizi h2", {
+    ...scrollRevealOption,
+    delay: 500,
+  });
+  ScrollReveal().reveal(".servizio-image-1", {
+    ...scrollRevealOption,
+    delay: 500,
+  });
+  ScrollReveal().reveal(".servizio-image-2", {
+    ...scrollRevealOption,
+    delay: 700,
+  });
+  ScrollReveal().reveal(".servizio-image-3", {
+    ...scrollRevealOption,
+    delay: 900,
+  });
+  ScrollReveal().reveal("#prodotti h2", {
+    ...scrollRevealOption,
+    delay: 500,
+  });
+  ScrollReveal().reveal("#flip-card-1", {
+    ...scrollRevealOption,
+    delay: 700,
+  });
+  ScrollReveal().reveal("#flip-card-2", {
+    ...scrollRevealOption,
+    delay: 900,
+  });
+  ScrollReveal().reveal("#flip-card-3", {
+    ...scrollRevealOption,
+    delay: 1100,
+  });
+  ScrollReveal().reveal("#flip-card-4", {
+    ...scrollRevealOption,
+    delay: 1300,
+  });
+  ScrollReveal().reveal("#escursioni h2", {
+    ...scrollRevealOption,
+    delay: 500,
+  });
+  ScrollReveal().reveal("#escursione-passione_mare", {
+    ...scrollRevealOption,
+    delay: 700,
+  });
+  ScrollReveal().reveal("#escursione-a_tutta_natura", {
+    ...scrollRevealOption,
+    delay: 900,
   });
 
   async function getAppartamenti(){

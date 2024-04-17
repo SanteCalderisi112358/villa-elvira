@@ -25,15 +25,10 @@ html {
 
 body {
     font-family: var(--header-font);
-    display: flex;
-    justify-content: center;
+    height: none;
+   
 }
 
-main {
-    width: 100%;
-    margin-top: 130px;
-    max-width: var(--max-width);
-}
 
 nav {
     position: fixed;
@@ -126,6 +121,7 @@ nav {
 .section__container {
     margin: auto;
     padding: 5rem 1rem;
+    margin-top: 100px;
 }
 
 
@@ -173,6 +169,15 @@ nav {
     margin-right: 5px;
     animation: runSlider 5s linear infinite;
 } */
+
+#story,
+#prodotti,
+#appartamenti,
+#prodotti,
+#escursioni,
+#servizi{
+    margin-bottom: 100px;
+}
 .slider {
     width: 100%;
     overflow: hidden;
@@ -302,6 +307,9 @@ nav {
 
 }
 
+.card-text{
+    color: var(--text-light);
+}
 .flip-card {
     height: 400px;
     width: 300px;
@@ -619,6 +627,58 @@ nav {
 .card__escursioni:hover .content__escursioni p{
     visibility: visible;
 }
+
+/*FOOTER*/
+footer{
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 35px 0 80px rgba(0,0,0,0.15);
+
+}
+
+.contacts{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contacts .logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-contacts{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.contacts .list-contacts ul{
+    width: 80%;
+list-style-type: none;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.contacts .list-contacts ul li p{
+    margin: 0;
+}
+.contacts .list-contacts ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.contacts .list-contacts ul li a{
+color: var(--primary-color);}
 @media (width > 768px) {
 .slider::before,
 .slider::after{
@@ -781,8 +841,8 @@ transition: all 300ms;
     }
 
     .story-text div {
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 300px;
         background: url('./assets/la-nostra-storia/la-nostra-storia-villa-elvira-1.jpg');
         background-position: center;
         background-repeat: no-repeat;
@@ -792,8 +852,8 @@ transition: all 300ms;
         flex-direction: column-reverse;
     }
     .story-text-2 div {
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 300px;
         background: url('./assets/la-nostra-storia/la-nostra-storia-villa-elvira-2.jpg');
         background-position: center;
         background-repeat: no-repeat;
@@ -845,6 +905,27 @@ aspect-ratio: 1;    }
         height: 360px;
     }
 }
+
+@media(max-width:992px){
+    .contacts{
+        flex-direction: row-reverse;
+    }
+
+    .contacts .list-contacts ul{
+        flex-direction: column;
+        align-items: baseline;
+        gap: 25px;
+    }
+
+    .contacts .logo,
+    .list-contacts{
+        width: 50%;
+    }
+
+    .contacts .list-contacts ul li{
+        font-size: 10px;
+    }
+} 
 @keyframes fade {
     0% {
         opacity: 0;
