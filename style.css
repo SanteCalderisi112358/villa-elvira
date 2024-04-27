@@ -679,6 +679,45 @@ justify-content: space-between;
 
 .contacts .list-contacts ul li a{
 color: var(--primary-color);}
+
+    /*FLIP CARD*/
+    .back{
+        transform: rotateY(0);
+        background-color: transparent;
+        /* transition: all 300ms; */
+        opacity: 0;
+        padding: 5px;
+    
+       }
+        .container-flipcard:hover .flip-card{
+            transform: rotateY(0);
+            
+    
+        }
+    
+        .container-flipcard:hover .front{
+            filter: blur(2px);
+            filter: brightness(0.5);
+    
+        }
+    .container-flipcard:hover .front div{
+        visibility: hidden;
+    }
+        .container-flipcard:hover .back{
+            /* transform: rotateY(0); */
+            border: none;
+            box-shadow: none;
+            height: 60%;
+            bottom: 0;
+    opacity: 1;
+    transition: all 300ms;
+    
+        }
+    
+       
+        .container-flipcard:hover .back p{
+            color: var(--extra-light);
+        }
 @media (width > 768px) {
 .slider::before,
 .slider::after{
@@ -774,43 +813,6 @@ color: var(--primary-color);}
         height: 100%;
     }
 
-    /*FLIP CARD*/
-   .back{
-    transform: rotateY(0);
-    background-color: transparent;
-    /* transition: all 300ms; */
-    opacity: 0;
-
-   }
-    .container-flipcard:hover .flip-card{
-        transform: rotateY(0);
-        
-
-    }
-
-    .container-flipcard:hover .front{
-        filter: blur(2px);
-        filter: brightness(0.5);
-
-    }
-.container-flipcard:hover .front div{
-    visibility: hidden;
-}
-    .container-flipcard:hover .back{
-        /* transform: rotateY(0); */
-        border: none;
-        box-shadow: none;
-        height: 60%;
-        bottom: 0;
-opacity: 1;
-transition: all 300ms;
-
-    }
-
-   
-    .container-flipcard:hover .back p{
-        color: var(--extra-light);
-    }
 
 }
 
@@ -903,6 +905,10 @@ aspect-ratio: 1;    }
     .flip-card{
         width: 270px;
         height: 360px;
+    }
+
+    .card__escursioni:hover{
+        height: 620px;
     }
 }
 
