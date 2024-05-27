@@ -1,1 +1,924 @@
- :root {--primary-color: #F07E23;--secondary-color: #f6ac0f;--text-dark: #0f172a;--text-light: #64748b;--extra-light: #f8fafc;--white: #ffffff;--max-width: 1550px;--header-font: "Poppins", sans-serif;;}html {scroll-behavior: smooth;}* {padding: 0;margin: 0;box-sizing: border-box;}body {font-family: var(--header-font);height: none;}.whatsapp-logo{position: fixed;bottom: 10px;right: 10px;cursor: pointer;}nav {position: fixed;top: 0;isolation: isolate;width: 100%;z-index: 9;}.nav__logo {padding: 20px;}.nav__bar {position: relative;isolation: isolate;box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);}.nav__header {padding: 1rem;padding-right: 2rem;display: flex;align-items: center;justify-content: space-between;background-color: white;}.nav__menu__btn {font-size: 1.5rem;color: var(--text-dark);cursor: pointer;}.nav__links {list-style: none;position: absolute;padding: 2rem;width: 100%;display: flex;flex-direction: column;align-items: center;gap: 2rem;background-color: var(--white);transform: translateY(-100%);transition: 0.5s;z-index: -1;}.nav__links.open {transform: translateY(0);margin-top: -5px;display: flex;}.nav__links a {color: var(--primary-color);transition: 0.3s;text-decoration: none;}.nav__links a:hover {color: var(--secondary-color);}.lang-menu {display: flex;flex-direction: column;align-items: center;cursor: pointer;}.selected-lang {display: flex;position: relative;}.lang {color: var(--primary-color);}#google_translate_element {display: none;position: absolute;bottom: 0px;right: 10px;}#google_translate_element.open {display: block;}.section__container {margin: auto;padding: 5rem 1rem;margin-top: 100px;}.section__header {font-size: 3rem;font-weight: 800;font-family: "Roboto Flex", sans-serif;color: var(--text-dark);}.header__container h1 {margin-bottom: 2rem;font-size: 4rem;font-weight: 600;line-height: 5rem;font-family: var(--header-font);color: var(--primary-color);text-shadow: 1px 1px 1px black;text-transform: uppercase;}#story, #prodotti, #appartamenti, #prodotti, #escursioni, #servizi {margin-bottom: 100px;}.slider {width: 100%;overflow: hidden;padding-top: 20px;display: flex;cursor: pointer;position: relative;}.slider::before {content: "";height: 100%;position: absolute;background: linear-gradient(to left, transparent, white);z-index: 2;left: 0;}.slider::after {content: "";height: 100%;position: absolute;background: linear-gradient(to right, transparent, white);z-index: 2;right: 0;}.slider:hover ul {animation-play-state: paused;}.slider ul {display: flex;animation: scroll 25s linear infinite;padding: 0;margin: 0;}.slider li {margin-right: 20px;list-style: none;display: flex;justify-content: center;align-items: center;}.slider img {margin-right: 10px;width: 32px;height: 32px;}@keyframes scroll {0% {transform: translateX(0);}100% {transform: translateX(-100%);}}#appartamenti h2, #prodotti h2, .section__container h2, #servizi h2, #escursioni h2 {font-size: 2rem;font-family: var(--header-font);color: var(--primary-color);text-shadow: 1px 1px 1px black;text-transform: uppercase;}#appartamenti h2, #prodotti h2, #servizi h2, #escursioni h2 {text-align: center;text-shadow: none;}.story {height: 500px;background: url('./assets/hero.jpg');background-position: center center;background-size: cover;background-attachment: fixed;}#prodotti div {display: flex;justify-content: space-around;flex-wrap: wrap;}.story-text p span {color: var(--primary-color);}.carousel-indicators [data-bs-target] {width: 5px;height: 5px;border-radius: 50%;background-color: var(--primary-color);}.carousel-control-prev-icon {background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23F07E23'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");}.carousel-control-next-icon {background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23F07E23'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");}.ri-search-eye-line, .ri-home-4-line, .ri-sun-line, .ri-user-line {color: var(--primary-color);font-size: 24px;margin: 5px;}.card-text {color: var(--text-light);}.flip-card {height: 400px;width: 300px;margin: 1rem;position: relative;transition: transform 1000ms;transform-style: preserve-3d;}.container-flipcard:hover .flip-card {cursor: pointer;transform: rotateY(180deg);}.front, .back {width: 100%;height: 100%;background-position: center;background-size: cover;border-radius: 25px;box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);position: absolute;backface-visibility: hidden;}#flip-card-1 .front div, #flip-card-2 .front div, #flip-card-3 .front div, #flip-card-4 .front div {width: 100%;display: flex;justify-content: end;align-items: end;}#flip-card-1 .front div div, #flip-card-2 .front div div, #flip-card-3 .front div div, #flip-card-4 .front div div {width: 50px;height: 50px;background-color: var(--extra-light);border-radius: 50%;display: flex;justify-content: center;align-items: center;}.back {background-color: var(--extra-light);transform: rotateY(180deg);padding: 1rem;}.back p {text-align: center;}.back h3 {color: var(--primary-color);}.front__1 {background-image: url('./assets/prodotti/oil.jpg');}.front__2 {background-image: url('./assets/prodotti/marmellata.jpg');}.front__3 {background-image: url('./assets/prodotti/limoncino.jpg');}.front__4 {background-image: url('./assets/prodotti/pomodori-secchi.jpg');}#servizi {width: 100%;}.servizi-details {display: flex;justify-content: space-around;flex-wrap: wrap;width: 100%;}.servizi-item {width: 400px;display: flex;flex-direction: column;align-items: center;margin: 20px;position: relative;}.servizio-image {width: 80%;height: 80%;background-color: #F07E23;border-radius: 50%;display: flex;justify-content: center;align-items: center;width: 400px;height: 400px;}.servizio-image div {width: 95%;height: 95%;border-radius: 50%;background-position: center;background-size: cover;display: flex;justify-content: center;align-items: center;}.servizio-button {text-decoration: none;cursor: pointer;padding: 1rem 2rem;border: none;border-radius: 25%;text-transform: uppercase;display: inline-block;margin: 0 15px;border-radius: 50px;background: rgba(255, 255, 255, .25);font-size: 20px;color: #F07E23;line-height: 50px;letter-spacing: 2px;font-weight: 400;padding: 0px 20px;-webkit-backdrop-filter: blur(15px) contrast(100%);backdrop-filter: blur(10px) contrast(100%);position: relative;overflow: hidden;text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.9);}.servizio-button::before, .servizio-button::after {content: "";position: absolute;top: 100%;left: 0;width: 100%;height: 0;background-color: #F07E23;transition: height 0.3s ease-in-out;}.servizio-button::after {top: -100%;}.servizio-button:hover::before, .servizio-button:hover::after {height: 200%;z-index: -1;}.servizio-button:hover {color: white;}.servizio-image:hover div {width: 100%;height: 100%;opacity: 1;border: 2px solid var(--primary-color);transition: all 0.5s ease;}.servizio-image:hover .servizio-overlay, .servizio-overlay-active {width: 100%;height: 100%;opacity: 1;border: 2px solid var(--primary-color);transition: all 0.5s ease;}.servizio-title {padding: 1rem 2rem;display: flex;flex-direction: column;z-index: 1;display: none;bottom: -55%;}.servizio-title p {text-align: center;color: var(--text-light);}.servizio-title h3 {text-align: center;color: var(--primary-color);letter-spacing: 2px;text-transform: uppercase;}.servizio-image-1 div {background-image: url('./assets/servizi/breakfast-villa-elvira.jpg');}.servizio-image-2 div {background-image: url('./assets/servizi/area-relax-villa-elvira.jpg');}.servizio-image-3 div {background-image: url('./assets/servizi/barbecue.jpg');}.servizio-image-4 div {background-image: url('./assets/servizi/dog-area.jpg');}.container__escursioni {position: relative;display: flex;justify-content: center;align-items: center;flex-wrap: wrap;gap: 100px 50px;padding: 100px 50px;}.card__escursioni {position: relative;display: flex;justify-content: center;align-items: flex-start;width: 350px;height: 305px;border: 1px solid var(--primary-color);border-radius: 20px;box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);transition: 0.5s;}.card__escursioni:hover {height: 515px;}.imgBox__escursioni {position: absolute;top: 20px;width: 300px;height: 220px;background-color: var(--primary-color);border-radius: 12px;transition: 0.5s;overflow: hidden;}.card__escursioni:hover .imgBox__escursioni {top: -100px;scale: 0.75;box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);}.imgBox__escursioni img {position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;}.content__escursioni {position: absolute;top: 241px;width: 100%;height: 30px;padding: 0 10px;text-align: center;overflow: hidden;transition: all 0.5s;}.content__escursioni h4 {color: var(--primary-color);font-size: 1.5rem;padding: 0 30px;}.content__escursioni p {color: var(--text-light);visibility: hidden;}.content__escursioni span {color: var(--primary-color);}.content__escursioni a {color: var(--primary-color);}.card__escursioni:hover .content__escursioni {top: 150px;height: 100%;}.card__escursioni:hover .content__escursioni p {visibility: visible;}footer {height: 300px;width: 100%;display: flex;flex-direction: column;align-items: center;justify-content: center;box-shadow: 35px 0 80px rgba(0, 0, 0, 0.15);}.contacts {width: 100%;display: flex;flex-direction: column;gap: 30px;}.contacts .logo {width: 100%;display: flex;justify-content: center;align-items: center;}.list-contacts {display: flex;justify-content: center;align-items: center;}.contacts .list-contacts ul {width: 80%;list-style-type: none;display: flex;align-items: center;justify-content: space-between;}.contacts .list-contacts ul li p {margin: 0;}.contacts .list-contacts ul li {display: flex;justify-content: center;align-items: center;gap: 5px;}.contacts .list-contacts ul li a {color: var(--primary-color);}.back {transform: rotateY(0);background-color: transparent;opacity: 0;padding: 5px;}.container-flipcard:hover .flip-card {transform: rotateY(0);}.container-flipcard:hover .front {filter: blur(2px);filter: brightness(0.5);}.container-flipcard:hover .front div {visibility: hidden;}.container-flipcard:hover .back {border: none;box-shadow: none;height: 60%;bottom: 0;opacity: 1;transition: all 300ms;}.container-flipcard:hover .back p {color: var(--extra-light);}@media (width > 768px) {.slider::before, .slider::after {width: 350px;}.nav__bar {margin: auto;padding: 0 2rem;padding-right: 3rem;display: flex;align-items: baseline;justify-content: space-between;background-color: var(--extra-light);}.nav__header {padding: 0;background-color: transparent;}.nav__menu__btn {display: none;}.nav__links {width: fit-content;padding: 0;position: static;flex-direction: row;transform: none;background-color: transparent;}.story {background: url('./assets/hero.jpg');background-position: center;background-size: cover;background-attachment: fixed;background-repeat: no-repeat;}#story {display: flex;flex-direction: column;padding: 2rem 1rem;}.story-text {display: flex;height: 300px;margin-bottom: 2rem;animation: fade linear both;animation-timeline: view();animation-range: entry 20% cover 50%;}.story-text p {width: 50%;padding: 0 2rem;font-size: 13px;height: 100%;justify-content: center;text-align: justify;transform: translateY(25%);}.story-text div {width: 50%;height: 100%;background: url('./assets/la-nostra-storia/la-nostra-storia-villa-elvira-1.jpg');background-position: center;background-repeat: no-repeat;background-size: cover;}.story-text-2 div {background: url('./assets/la-nostra-storia/la-nostra-storia-villa-elvira-2.jpg');background-position: center;background-repeat: no-repeat;background-size: cover;}.carousel-inner {height: 100%;}}@media(max-width:768px) {.slider::before, .slider::after {width: 100px;}#story {width: 100%;}.story-text {display: flex;flex-direction: column;margin-bottom: 2rem;align-items: center;animation: fade linear both;animation-timeline: view();animation-range: entry 20% cover 50%;}.story-text p {width: 70%;padding: 2rem 0;text-align: justify;}.story-text div {width: 300px;height: 300px;background: url('./assets/la-nostra-storia/la-nostra-storia-villa-elvira-1.jpg');background-position: center;background-repeat: no-repeat;background-size: cover;}.story-text-2 {flex-direction: column-reverse;}.story-text-2 div {width: 300px;height: 300px;background: url('./assets/la-nostra-storia/la-nostra-storia-villa-elvira-2.jpg');background-position: center;background-repeat: no-repeat;background-size: cover;}.slider li {font-size: 10px;}#servizi {display: flex;flex-direction: column;justify-content: center;}.content__escursioni {height: 60px;}}@media(max-width:425px) {.slider::before, .slider::after {width: 50px;}.servizi-item, .servizio-image div {width: 250px;aspect-ratio: 1;}.servizio-image {width: 100%;height: 100%;background-color: transparent;}.servizio-title {padding: 2rem 0;}#prodotti {width: 100%;}.flip-card {width: 270px;height: 360px;}.card__escursioni:hover {height: 620px;}}@media(max-width:992px) {.contacts {flex-direction: row-reverse;}.contacts .list-contacts ul {flex-direction: column;align-items: baseline;gap: 25px;}.contacts .logo, .list-contacts {width: 50%;}.contacts .list-contacts ul li {font-size: 10px;}}@keyframes fade {0% {opacity: 0;transform: translateY(10%);}50% {opacity: .9;transform: translateY(0);}100% {opacity: 1;}}
+ :root {
+     --primary-color: #F07E23;
+     --secondary-color: #f6ac0f;
+     --text-dark: #0f172a;
+     --text-light: #64748b;
+     --extra-light: #f8fafc;
+     --white: #ffffff;
+     --max-width: 1550px;
+     --header-font: "Poppins", sans-serif;
+     ;
+ }
+
+ html {
+     scroll-behavior: smooth;
+ }
+
+ * {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     font-family: var(--header-font);
+     height: none;
+ }
+
+ .whatsapp-logo {
+     position: fixed;
+     bottom: 10px;
+     right: 10px;
+     cursor: pointer;
+ }
+
+ nav {
+     position: fixed;
+     top: 0;
+     isolation: isolate;
+     width: 100%;
+     z-index: 9;
+ }
+
+ .nav__logo {
+     padding: 20px;
+ }
+
+ .nav__bar {
+     position: relative;
+     isolation: isolate;
+     box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+ }
+
+ .nav__header {
+     padding: 1rem;
+     padding-right: 2rem;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     background-color: white;
+ }
+
+ .nav__menu__btn {
+     font-size: 1.5rem;
+     color: var(--text-dark);
+     cursor: pointer;
+ }
+
+ .nav__links {
+     list-style: none;
+     position: absolute;
+     padding: 2rem;
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 2rem;
+     background-color: var(--white);
+     transform: translateY(-100%);
+     transition: 0.5s;
+     z-index: -1;
+ }
+
+ .nav__links.open {
+     transform: translateY(0);
+     margin-top: -5px;
+     display: flex;
+ }
+
+ .nav__links a {
+     color: var(--primary-color);
+     transition: 0.3s;
+     text-decoration: none;
+ }
+
+ .nav__links a:hover {
+     color: var(--secondary-color);
+ }
+
+ .lang-menu {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     cursor: pointer;
+ }
+
+ .selected-lang {
+     display: flex;
+     position: relative;
+ }
+
+ .lang {
+     color: var(--primary-color);
+ }
+
+ #google_translate_element {
+     display: none;
+     position: absolute;
+     bottom: 0px;
+     right: 10px;
+ }
+
+ #google_translate_element.open {
+     display: block;
+ }
+
+ .section__container {
+     margin: auto;
+     padding: 5rem 1rem;
+     margin-top: 100px;
+ }
+
+ .section__header {
+     font-size: 3rem;
+     font-weight: 800;
+     font-family: "Roboto Flex", sans-serif;
+     color: var(--text-dark);
+ }
+
+ .header__container h1 {
+     margin-bottom: 2rem;
+     font-size: 4rem;
+     font-weight: 600;
+     line-height: 5rem;
+     font-family: var(--header-font);
+     color: var(--primary-color);
+     text-shadow: 1px 1px 1px black;
+     text-transform: uppercase;
+ }
+
+ #story,
+ #prodotti,
+ #appartamenti,
+ #prodotti,
+ #escursioni,
+ #servizi {
+     margin-bottom: 100px;
+ }
+
+ .slider {
+     width: 100%;
+     overflow: hidden;
+     padding-top: 20px;
+     display: flex;
+     cursor: pointer;
+     position: relative;
+ }
+
+ .slider::before {
+     content: "";
+     height: 100%;
+     position: absolute;
+     background: linear-gradient(to left, transparent, white);
+     z-index: 2;
+     left: 0;
+ }
+
+ .slider::after {
+     content: "";
+     height: 100%;
+     position: absolute;
+     background: linear-gradient(to right, transparent, white);
+     z-index: 2;
+     right: 0;
+ }
+
+ .slider:hover ul {
+     animation-play-state: paused;
+ }
+
+ .slider ul {
+     display: flex;
+     animation: scroll 25s linear infinite;
+     padding: 0;
+     margin: 0;
+ }
+
+ .slider li {
+     margin-right: 20px;
+     list-style: none;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .slider img {
+     margin-right: 10px;
+     width: 32px;
+     height: 32px;
+ }
+
+ @keyframes scroll {
+     0% {
+         transform: translateX(0);
+     }
+
+     100% {
+         transform: translateX(-100%);
+     }
+ }
+
+ #appartamenti h2,
+ #prodotti h2,
+ .section__container h2,
+ #servizi h2,
+ #escursioni h2 {
+     font-size: 2rem;
+     font-family: var(--header-font);
+     color: var(--primary-color);
+     text-shadow: 1px 1px 1px black;
+     text-transform: uppercase;
+ }
+
+ #appartamenti h2,
+ #prodotti h2,
+ #servizi h2,
+ #escursioni h2 {
+     text-align: center;
+     text-shadow: none;
+ }
+
+ .story {
+     height: 500px;
+     background: url('./assets/hero.jpg');
+     background-position: center center;
+     background-size: cover;
+     background-attachment: fixed;
+ }
+
+ #prodotti div {
+     display: flex;
+     justify-content: space-around;
+     flex-wrap: wrap;
+ }
+
+ .story-text p span {
+     color: var(--primary-color);
+ }
+
+ .carousel-indicators [data-bs-target] {
+     width: 5px;
+     height: 5px;
+     border-radius: 50%;
+     background-color: var(--primary-color);
+ }
+
+ .carousel-control-prev-icon {
+     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23F07E23'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+ }
+
+ .carousel-control-next-icon {
+     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23F07E23'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+ }
+
+ .ri-search-eye-line,
+ .ri-home-4-line,
+ .ri-sun-line,
+ .ri-user-line {
+     color: var(--primary-color);
+     font-size: 24px;
+     margin: 5px;
+ }
+
+ .card-text {
+     color: var(--text-light);
+ }
+
+ .flip-card {
+     height: 400px;
+     width: 300px;
+     margin: 1rem;
+     position: relative;
+     transition: transform 1000ms;
+     transform-style: preserve-3d;
+ }
+
+ .container-flipcard:hover .flip-card {
+     cursor: pointer;
+     transform: rotateY(180deg);
+ }
+
+ .front,
+ .back {
+     width: 100%;
+     height: 100%;
+     background-position: center;
+     background-size: cover;
+     border-radius: 25px;
+     box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+     position: absolute;
+     backface-visibility: hidden;
+ }
+
+ #flip-card-1 .front div,
+ #flip-card-2 .front div,
+ #flip-card-3 .front div,
+ #flip-card-4 .front div {
+     width: 100%;
+     display: flex;
+     justify-content: end;
+     align-items: end;
+ }
+
+ #flip-card-1 .front div div,
+ #flip-card-2 .front div div,
+ #flip-card-3 .front div div,
+ #flip-card-4 .front div div {
+     width: 50px;
+     height: 50px;
+     background-color: var(--extra-light);
+     border-radius: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .back {
+     background-color: var(--extra-light);
+     transform: rotateY(180deg);
+     padding: 1rem;
+ }
+
+ .back p {
+     text-align: center;
+ }
+
+ .back h3 {
+     color: var(--primary-color);
+ }
+
+ .front__1 {
+     background-image: url('./assets/prodotti/oil.jpg');
+ }
+
+ .front__2 {
+     background-image: url('./assets/prodotti/marmellata.jpg');
+ }
+
+ .front__3 {
+     background-image: url('./assets/prodotti/limoncino.jpg');
+ }
+
+ .front__4 {
+     background-image: url('./assets/prodotti/pomodori-secchi.jpg');
+ }
+
+ #servizi {
+     width: 100%;
+ }
+
+ .servizi-details {
+     display: flex;
+     justify-content: space-around;
+     flex-wrap: wrap;
+     width: 100%;
+ }
+
+ .servizi-item {
+     width: 400px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     margin: 20px;
+     position: relative;
+ }
+
+ .servizio-image {
+     width: 80%;
+     height: 80%;
+     background-color: #F07E23;
+     border-radius: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 400px;
+     height: 400px;
+ }
+
+ .servizio-image div {
+     width: 95%;
+     height: 95%;
+     border-radius: 50%;
+     background-position: center;
+     background-size: cover;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .servizio-button {
+     text-decoration: none;
+     cursor: pointer;
+     padding: 1rem 2rem;
+     border: none;
+     border-radius: 25%;
+     text-transform: uppercase;
+     display: inline-block;
+     margin: 0 15px;
+     border-radius: 50px;
+     background: rgba(255, 255, 255, .25);
+     font-size: 20px;
+     color: #F07E23;
+     line-height: 50px;
+     letter-spacing: 2px;
+     font-weight: 400;
+     padding: 0px 20px;
+     -webkit-backdrop-filter: blur(15px) contrast(100%);
+     backdrop-filter: blur(10px) contrast(100%);
+     position: relative;
+     overflow: hidden;
+     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.9);
+ }
+
+ .servizio-button::before,
+ .servizio-button::after {
+     content: "";
+     position: absolute;
+     top: 100%;
+     left: 0;
+     width: 100%;
+     height: 0;
+     background-color: #F07E23;
+     transition: height 0.3s ease-in-out;
+ }
+
+ .servizio-button::after {
+     top: -100%;
+ }
+
+ .servizio-button:hover::before,
+ .servizio-button:hover::after {
+     height: 200%;
+     z-index: -1;
+ }
+
+ .servizio-button:hover {
+     color: white;
+ }
+
+ .servizio-image:hover div {
+     width: 100%;
+     height: 100%;
+     opacity: 1;
+     border: 2px solid var(--primary-color);
+     transition: all 0.5s ease;
+ }
+
+ .servizio-image:hover .servizio-overlay,
+ .servizio-overlay-active {
+     width: 100%;
+     height: 100%;
+     opacity: 1;
+     border: 2px solid var(--primary-color);
+     transition: all 0.5s ease;
+ }
+
+ .servizio-title {
+     padding: 1rem 2rem;
+     display: flex;
+     flex-direction: column;
+     z-index: 1;
+     display: none;
+     bottom: -55%;
+ }
+
+ .servizio-title p {
+     text-align: center;
+     color: var(--text-light);
+ }
+
+ .servizio-title h3 {
+     text-align: center;
+     color: var(--primary-color);
+     letter-spacing: 2px;
+     text-transform: uppercase;
+ }
+
+ .servizio-image-1 div {
+     background-image: url('./assets/servizi/breakfast-villa-elvira.jpg');
+ }
+
+ .servizio-image-2 div {
+     background-image: url('./assets/servizi/area-relax-villa-elvira.jpg');
+ }
+
+ .servizio-image-3 div {
+     background-image: url('./assets/servizi/barbecue.jpg');
+ }
+
+ .servizio-image-4 div {
+     background-image: url('./assets/servizi/dog-area.jpg');
+ }
+
+ .container__escursioni {
+     position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-wrap: wrap;
+     gap: 100px 50px;
+     padding: 100px 50px;
+ }
+
+ .card__escursioni {
+     position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: flex-start;
+     width: 350px;
+     height: 305px;
+     border: 1px solid var(--primary-color);
+     border-radius: 20px;
+     box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+     transition: 0.5s;
+ }
+
+ .card__escursioni:hover {
+     height: 515px;
+ }
+
+ .imgBox__escursioni {
+     position: absolute;
+     top: 20px;
+     width: 300px;
+     height: 220px;
+     background-color: var(--primary-color);
+     border-radius: 12px;
+     transition: 0.5s;
+     overflow: hidden;
+ }
+
+ .card__escursioni:hover .imgBox__escursioni {
+     top: -100px;
+     scale: 0.75;
+     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+ }
+
+ .imgBox__escursioni img {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+
+ .content__escursioni {
+     position: absolute;
+     top: 241px;
+     width: 100%;
+     height: 30px;
+     padding: 0 10px;
+     text-align: center;
+     overflow: hidden;
+     transition: all 0.5s;
+ }
+
+ .content__escursioni h4 {
+     color: var(--primary-color);
+     font-size: 1.5rem;
+     padding: 0 30px;
+ }
+
+ .content__escursioni p {
+     color: var(--text-light);
+     visibility: hidden;
+ }
+
+ .content__escursioni span {
+     color: var(--primary-color);
+ }
+
+ .content__escursioni a {
+     color: var(--primary-color);
+ }
+
+ .card__escursioni:hover .content__escursioni {
+     top: 150px;
+     height: 100%;
+ }
+
+ .card__escursioni:hover .content__escursioni p {
+     visibility: visible;
+ }
+
+ footer {
+     height: 300px;
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     box-shadow: 35px 0 80px rgba(0, 0, 0, 0.15);
+ }
+
+ .contacts {
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     gap: 30px;
+ }
+
+ .contacts .logo {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .list-contacts {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .contacts .list-contacts ul {
+     width: 80%;
+     list-style-type: none;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ }
+
+ .contacts .list-contacts ul li p {
+     margin: 0;
+ }
+
+ .contacts .list-contacts ul li {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 5px;
+ }
+
+ .contacts .list-contacts ul li a {
+     color: var(--primary-color);
+ }
+
+ .back {
+     transform: rotateY(0);
+     background-color: transparent;
+     opacity: 0;
+     padding: 5px;
+ }
+
+ .container-flipcard:hover .flip-card {
+     transform: rotateY(0);
+ }
+
+ .container-flipcard:hover .front {
+     filter: blur(2px);
+     filter: brightness(0.5);
+ }
+
+ .container-flipcard:hover .front div {
+     visibility: hidden;
+ }
+
+ .container-flipcard:hover .back {
+     border: none;
+     box-shadow: none;
+     height: 60%;
+     bottom: 0;
+     opacity: 1;
+     transition: all 300ms;
+ }
+
+ .container-flipcard:hover .back p {
+     color: var(--extra-light);
+ }
+
+ @media (width > 768px) {
+
+     .slider::before,
+     .slider::after {
+         width: 350px;
+     }
+
+     .nav__bar {
+         margin: auto;
+         padding: 0 2rem;
+         padding-right: 3rem;
+         display: flex;
+         align-items: baseline;
+         justify-content: space-between;
+         background-color: var(--extra-light);
+     }
+
+     .nav__header {
+         padding: 0;
+         background-color: transparent;
+     }
+
+     .nav__menu__btn {
+         display: none;
+     }
+
+     .nav__links {
+         width: fit-content;
+         padding: 0;
+         position: static;
+         flex-direction: row;
+         transform: none;
+         background-color: transparent;
+     }
+
+     .story {
+         background: url('./assets/hero.jpg');
+         background-position: center;
+         background-size: cover;
+         background-attachment: fixed;
+         background-repeat: no-repeat;
+     }
+
+     #story {
+         display: flex;
+         flex-direction: column;
+         padding: 2rem 1rem;
+     }
+
+     .story-text {
+         display: flex;
+         height: 300px;
+         margin-bottom: 2rem;
+         animation: fade linear both;
+         animation-timeline: view();
+         animation-range: entry 20% cover 50%;
+     }
+
+     .story-text p {
+         width: 50%;
+         padding: 0 2rem;
+         font-size: 13px;
+         height: 100%;
+         justify-content: center;
+         text-align: justify;
+         transform: translateY(25%);
+     }
+
+     .story-text div {
+         width: 50%;
+         height: 100%;
+         background: url('./assets/la-nostra-storia/la-nostra-storia-villa-elvira-1.jpg');
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+     }
+
+     .story-text-2 div {
+         background: url('./assets/la-nostra-storia/la-nostra-storia-villa-elvira-2.jpg');
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+     }
+
+     .carousel-inner {
+         height: 100%;
+     }
+ }
+
+ @media(max-width:768px) {
+
+     .slider::before,
+     .slider::after {
+         width: 100px;
+     }
+
+     #story {
+         width: 100%;
+     }
+
+     .story-text {
+         display: flex;
+         flex-direction: column;
+         margin-bottom: 2rem;
+         align-items: center;
+         animation: fade linear both;
+         animation-timeline: view();
+         animation-range: entry 20% cover 50%;
+     }
+
+     .story-text p {
+         width: 70%;
+         padding: 2rem 0;
+         text-align: justify;
+     }
+
+     .story-text div {
+         width: 300px;
+         height: 300px;
+         background: url('./assets/la-nostra-storia/la-nostra-storia-villa-elvira-1.jpg');
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+     }
+
+     .story-text-2 {
+         flex-direction: column-reverse;
+     }
+
+     .story-text-2 div {
+         width: 300px;
+         height: 300px;
+         background: url('./assets/la-nostra-storia/la-nostra-storia-villa-elvira-2.jpg');
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+     }
+
+     .slider li {
+         font-size: 10px;
+     }
+
+     #servizi {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+     }
+
+     .content__escursioni {
+         height: 60px;
+     }
+ }
+
+ @media(max-width:425px) {
+
+     .slider::before,
+     .slider::after {
+         width: 50px;
+     }
+
+     .servizi-item,
+     .servizio-image div {
+         width: 250px;
+         aspect-ratio: 1;
+     }
+
+     .servizio-image {
+         width: 100%;
+         height: 100%;
+         background-color: transparent;
+     }
+
+     .servizio-title {
+         padding: 2rem 0;
+     }
+
+     #prodotti {
+         width: 100%;
+     }
+
+     .flip-card {
+         width: 270px;
+         height: 360px;
+     }
+
+     .card__escursioni:hover {
+         height: 630px;
+     }
+
+     .iubenda {
+         padding: 2rem;
+         width: 100%;
+         display: flex;
+         flex-direction: column;
+     }
+ }
+
+ @media(max-width:992px) {
+     .contacts {
+         flex-direction: row-reverse;
+         margin-top: 30px;
+     }
+
+     .contacts .list-contacts ul {
+         flex-direction: column;
+         align-items: baseline;
+         gap: 25px;
+     }
+
+     .contacts .logo,
+     .list-contacts {
+         width: 50%;
+     }
+
+     .contacts .list-contacts ul li {
+         font-size: 10px;
+     }
+ }
+
+ @keyframes fade {
+     0% {
+         opacity: 0;
+         transform: translateY(10%);
+     }
+
+     50% {
+         opacity: .9;
+         transform: translateY(0);
+     }
+
+     100% {
+         opacity: 1;
+     }
+ }
